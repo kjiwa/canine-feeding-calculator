@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
-    <body onload="handleBodyWeightChanges()">
+    <body onload="handleBodyWeightChanges(event)">
         <div class="container-fluid">
-            <form onsubmit="handleBodyWeightChanges()">
+            <form onsubmit="handleBodyWeightChanges(event)">
                 <div class="form-row">
                     <div class="col"><h3>Canine Feeding Calculator</h3></div>
                 </div>
@@ -16,13 +16,13 @@
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label for="body-weight-input">Body weight</label>
-                            <input type="number" step="0.01" class="form-control" id="body-weight-input" value="4" required onchange="handleBodyWeightChanges()">
+                            <input type="number" step="0.01" class="form-control" id="body-weight-input" value="4" required autofocus onkeyup="handleBodyWeightChanges(event)">
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label for="body-weight-units-select">Body weight units</label>
-                            <select id="body-weight-units-select" class="form-control" onchange="handleBodyWeightChanges()">
+                            <select id="body-weight-units-select" class="form-control" onchange="handleBodyWeightChanges(event)">
                                 <option selected>lbs</option>
                                 <option>kg</option>
                             </select>

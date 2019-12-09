@@ -45,8 +45,9 @@ function computeCups(weight) {
     return lowCups + slope * (weight - lowWeight);
 }
 
-function handleBodyWeightChanges() {
-    var weight = document.getElementById('body-weight-input').value;
+function handleBodyWeightChanges(event) {
+    event.preventDefault();
+    var weight = parseFloat(document.getElementById('body-weight-input').value);
     var units = document.getElementById('body-weight-units-select').value;
     if (units == 'kg') {
         weight *= 2.20462;
