@@ -48,6 +48,10 @@ function computeCups(weight) {
 function handleBodyWeightChanges(event) {
     event.preventDefault();
     var weight = parseFloat(document.getElementById('body-weight-input').value);
+    if (!weight) {
+        weight = MINIMUM_WEIGHT;
+    }
+    
     var units = document.getElementById('body-weight-units-select').value;
     if (units == 'kg') {
         weight *= 2.20462;
