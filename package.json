@@ -1,0 +1,28 @@
+{
+    "name": "canine-feeding-calculator",
+    "version": "1.0.0",
+    "description": "A canine food quantity calculator.",
+    "scripts": {
+        "build": "webpack --config webpack.config.js src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kjiwa/canine-feeding-calculator.git"
+    },
+    "author": "Kamil Jiwa <kamil.jiwa@gmail.com>",
+    "license": "MIT",
+    "homepage": "https://kjiwa.github.io/canine-feeding-calculator/",
+    "devDependencies": {
+        "eslint": "^6.7.2",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-loader": "^3.0.3",
+        "eslint-plugin-import": "^2.19.1",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "html-webpack-inline-source-plugin": "0.0.10",
+        "html-webpack-plugin": "^3.2.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
+    }
+}
