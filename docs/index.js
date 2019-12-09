@@ -37,10 +37,10 @@ function computeCups(weight) {
         ++index;
     }
 
-    var lowCups = FEEDING_RECOMMENDATION_CUPS[index - 1];
-    var highCups = FEEDING_RECOMMENDATION_CUPS[index];
-    var lowWeight = FEEDING_RECOMMENDATION_WEIGHTS[index - 1];
-    var highWeight = FEEDING_RECOMMENDATION_WEIGHTS[index];
+    var lowWeight = Object.keys(FEEDING_RECOMMENDATIONS)[index - 1];
+    var highWeight = Object.keys(FEEDING_RECOMMENDATIONS)[index];
+    var lowCups = FEEDING_RECOMMENDATIONS[lowWeight];
+    var highCups = FEEDING_RECOMMENDATIONS[highWeight];
     var slope = (highCups - lowCups) / (highWeight - lowWeight);
     return lowCups + slope * (weight - lowWeight);
 }
